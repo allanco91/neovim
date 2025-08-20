@@ -6,11 +6,7 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "ts_ls" },
-		},
-		dependencies = {
-			{ "mason-org/mason.nvim", opts = {} },
-			"neovim/nvim-lspconfig",
+			ensure_installed = { "lua_ls", "ts_ls", "biome" },
 		},
 	},
 	{
@@ -18,6 +14,7 @@ return {
 		config = function()
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("ts_ls")
+            vim.lsp.enable("biome")
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
