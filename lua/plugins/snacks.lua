@@ -8,7 +8,7 @@ return {
     },
     keys = {
         { 
-            "<C-t>",
+            "<C-_>",
             function()
                 Snacks.terminal()
             end,

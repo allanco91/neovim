@@ -6,5 +6,6 @@ return {
         require("mini.snippets").setup()
         require("mini.completion").setup()
         require("mini.notify").setup()
+        require("mini.pairs").setup()
     end,
 }
